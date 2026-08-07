@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Obleas Dulce Encanto - Obleas artesanales con deliciosos rellenos y toppings.">
+  <title>Obleas Dulce Encanto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#inicio" class="logo">🍓 Obleas <span>Dulce Encanto</span></a>
+    <button class="menu-btn" aria-label="Abrir menú">☰</button>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#personaliza">Personaliza</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-btn" id="cartButton">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">HECHAS CON AMOR ✨</p>
+        <h1>Una oblea para alegrar tu día.</h1>
+        <p>Discos crujientes, mucho arequipe y tus toppings favoritos. Crea una combinación tan especial como tú.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#menu">Ver menú</a>
+          <a class="btn secondary" href="#personaliza">Crear mi oblea</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="waffle">🥞</div>
+        <span class="floating one">🍓</span>
+        <span class="floating two">🍫</span>
+        <span class="floating three">🥥</span>
+        <div class="price-tag">Desde<br><strong>$2.50</strong></div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">NUESTRO MENÚ</p>
+        <h2>Favoritas de la casa</h2>
+        <p>Elige una de nuestras combinaciones o crea la tuya.</p>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="customizer section" id="personaliza">
+      <div class="section-heading">
+        <p class="eyebrow">HAZLA A TU MANERA</p>
+        <h2>Personaliza tu oblea</h2>
+        <p>Selecciona tus ingredientes y descubre el precio de tu combinación.</p>
+      </div>
+      <div class="custom-grid">
+        <div class="options-card">
+          <h3>1. Elige el relleno</h3>
+          <label class="option"><input type="radio" name="filling" value="Arequipe" data-price="1.5" checked><span>Arequipe</span><b>+$1.50</b></label>
+          <label class="option"><input type="radio" name="filling" value="Nutella" data-price="2"><span>Nutella</span><b>+$2.00</b></label>
+          <label class="option"><input type="radio" name="filling" value="Chocolate" data-price="1.75"><span>Chocolate</span><b>+$1.75</b></label>
+
+          <h3>2. Agrega toppings</h3>
+          <label class="option"><input type="checkbox" class="topping" value="Fresas" data-price="0.75"><span>🍓 Fresas</span><b>+$0.75</b></label>
+          <label class="option"><input type="checkbox" class="topping" value="Banano" data-price="0.60"><span>🍌 Banano</span><b>+$0.60</b></label>
+          <label class="option"><input type="checkbox" class="topping" value="Coco" data-price="0.50"><span>🥥 Coco</span><b>+$0.50</b></label>
+          <label class="option"><input type="checkbox" class="topping" value="Chispas de chocolate" data-price="0.80"><span>🍫 Chispas de chocolate</span><b>+$0.80</b></label>
+        </div>
+        <div class="preview-card">
+          <div class="preview-plate"><div class="preview-waffle">🥞</div></div>
+          <h3>Tu oblea</h3>
+          <p id="selectionText">Arequipe</p>
+          <div class="total"><span>Total</span><strong id="customTotal">$4.00</strong></div>
+          <button class="btn primary full" id="addCustom">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="nosotros">
+      <div class="about-image">🍓<br>🥞<br>🍫</div>
+      <div>
+        <p class="eyebrow">CONÓCENOS</p>
+        <h2>Pequeñas obleas, grandes momentos.</h2>
+        <p>En Dulce Encanto creemos que un postre sencillo puede convertirse en un recuerdo especial. Preparamos nuestras obleas al momento y combinamos ingredientes dulces y frescos para que cada cliente pueda encontrar su mezcla favorita.</p>
+        <div class="features">
+          <div><strong>01</strong><span>Preparadas al momento</span></div>
+          <div><strong>02</strong><span>Ingredientes seleccionados</span></div>
+          <div><strong>03</strong><span>Combinaciones para todos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <div class="section-heading">
+        <p class="eyebrow">CONTÁCTANOS</p>
+        <h2>¿Se te antojó?</h2>
+        <p>Haz tu pedido o escríbenos para conocer nuestras opciones.</p>
+      </div>
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form">
+          <input type="text" id="name" placeholder="Tu nombre" required>
+          <input type="email" id="email" placeholder="Tu correo" required>
+          <textarea id="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+          <button class="btn primary" type="submit">Enviar mensaje</button>
+        </form>
+        <div class="contact-info">
+          <div><span>📱</span><div><strong>WhatsApp</strong><p>+507 6803-5103</p></div></div>
+          <div><span>📍</span><div><strong>Ubicación</strong><p>Panamá Oeste, Panamá</p></div></div>
+          <div><span>🕐</span><div><strong>Horario</strong><p>Lun - Sáb · 11:00 a.m. - 8:00 p.m.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">🍓 Obleas <span>Dulce Encanto</span></div>
+    <p>© 2026 Dulce Encanto · Hecho con ❤️</p>
+  </footer>
+
+  <div class="modal" id="cartModal">
+    <div class="modal-box">
+      <button class="close" id="closeCart">×</button>
+      <h2>Tu carrito 🛒</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="btn primary full" id="checkout">Realizar pedido</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Producto agregado al carrito ✓</div>
+  <script src="script.js"></script>
+</body>
+</html>
